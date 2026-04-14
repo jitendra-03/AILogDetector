@@ -1,0 +1,250 @@
+# =============================================================
+#  AI Log Error Detector — Seed Knowledge Base
+#  ─────────────────────────────────────────────────────────────
+#  Pre-populated errors and expert solutions.
+#  Add your own entries to grow the knowledge base over time.
+#  Run:  python main.py --seed-kb   to force re-import.
+# =============================================================
+
+errors:
+
+  # ── Connectivity ──────────────────────────────────────────
+  - error: "Connection refused"
+    severity: ERROR
+    solution: |
+      **Root Cause:** The target service is not listening on the expected host/port.
+
+      **Solution:**
+      1. Verify the service is running: `sc query <ServiceName>` or check Task Manager.
+      2. Check the configured host and port in your application config.
+      3. Ensure the Windows Firewall / network ACL allows the connection:
+         `netsh advfirewall firewall show rule name=all | findstr <port>`
+      4. Test connectivity: `Test-NetConnection -ComputerName <host> -Port <port>`
+
+      **Prevention:** Add a health-check startup probe and monitor service uptime.
+
+  - error: "Connection timed out"
+    severity: ERROR
+    solution: |
+      **Root Cause:** Network latency, firewall dropping packets, or the service is overloaded.
+
+      **Solution:**
+      1. Increase the application's connection/read timeout setting.
+      2. Test network path: `tracert <host>` or `Test-NetConnection <host> -Port <port>`.
+      3. Check for resource exhaustion on the target host (CPU, thread pool, connection pool).
+      4. Review firewall logs for dropped packets.
+
+      **Prevention:** Implement retry logic with exponential back-off and circuit breakers.
+
+  - error: "Could not connect to server"
+    severity: ERROR
+    solution: |
+      **Root Cause:** DNS resolution failure, unreachable host, or port blocked.
+
+      **Solution:**
+      1. Verify DNS resolution: `Resolve-DnsName <hostname>`.
+      2. Ping the target: `ping <hostname>` — if it fails, check routing/firewall.
+      3. Confirm the service is bound to the correct network interface.
+      4. Check the application's connection string / configuration file.
+
+      **Prevention:** Use connection-pool health checks and automatic failover.
+
+  # ── Access & Permissions ──────────────────────────────────
+  - error: "Access is denied"
+    severity: ERROR
+    solution: |
+      **Root Cause:** The process account lacks the required NTFS/share/registry permission.
+
+      **Solution:**
+      1. Run the application as Administrator (right-click → "Run as administrator").
+      2. Check file/folder ACL: `icacls "C:\path\to\resource"`.
+      3. Grant the service account the required permission:
+         `icacls "C:\path" /grant "DOMAIN\ServiceAccount:(RX)"`
+      4. If it is a registry key: open regedit, right-click the key → Permissions.
+
+      **Prevention:** Follow the principle of least privilege; document required ACLs.
+
+  - error: "Permission denied"
+    severity: ERROR
+    solution: |
+      **Root Cause:** The running user lacks read/write permission on the target resource.
+
+      **Solution:**
+      1. Identify the process account: `whoami` or check the service properties.
+      2. Adjust permissions: `icacls "<path>" /grant "<user>:(F)"`.
+      3. For network shares: ensure the share permissions AND NTFS permissions both allow access.
+
+      **Prevention:** Use service accounts with minimal required permissions and audit them regularly.
+
+  # ── Memory & Resources ────────────────────────────────────
+  - error: "Out of memory"
+    severity: CRITICAL
+    solution: |
+      **Root Cause:** The process has exhausted available heap/virtual memory.
+
+      **Solution:**
+      1. Increase JVM/CLR heap or OS virtual memory if applicable.
+      2. Profile memory usage to find leaks: use VisualVM, dotMemory, or Windows Memory Diagnostic.
+      3. Reduce in-memory data sets (pagination, streaming, lazy loading).
+      4. Increase Windows page file size: System → Advanced → Performance Settings → Virtual Memory.
+      5. Restart the service as a short-term fix.
+
+      **Prevention:** Set memory limits, add heap-usage alerts, and schedule periodic restarts.
+
+  - error: "Stack overflow"
+    severity: CRITICAL
+    solution: |
+      **Root Cause:** Infinite recursion or excessively deep call stack.
+
+      **Solution:**
+      1. Review recent code changes for unbounded recursive calls.
+      2. Add a recursion depth guard / iterative alternative.
+      3. Increase the thread stack size (application-specific configuration).
+      4. Capture a stack trace at the point of failure for analysis.
+
+      **Prevention:** Unit-test recursive functions with large/pathological inputs.
+
+  # ── Database ──────────────────────────────────────────────
+  - error: "database connection pool exhausted"
+    severity: ERROR
+    solution: |
+      **Root Cause:** More concurrent requests than available database connections.
+
+      **Solution:**
+      1. Increase the pool size in the connection string / ORM config.
+      2. Ensure connections are properly closed/returned after use (check for connection leaks).
+      3. Add query timeouts so long-running queries don't hold connections.
+      4. Consider read replicas to distribute load.
+
+      **Prevention:** Monitor pool utilisation metrics; set pool-exhaustion alerts.
+
+  - error: "deadlock detected"
+    severity: ERROR
+    solution: |
+      **Root Cause:** Two or more transactions are mutually blocking each other.
+
+      **Solution:**
+      1. Review locking order — always acquire locks in the same sequence across all code paths.
+      2. Shorten transaction scope to reduce lock hold time.
+      3. Use READ COMMITTED isolation level where SERIALIZABLE is not required.
+      4. Enable deadlock logging (`DBCC TRACEON(1222, -1)` for SQL Server).
+
+      **Prevention:** Implement retry logic for deadlock victims; peer-review transactions.
+
+  # ── Disk ──────────────────────────────────────────────────
+  - error: "disk full"
+    severity: CRITICAL
+    solution: |
+      **Root Cause:** The target volume has no remaining free space.
+
+      **Solution:**
+      1. Check disk usage: `Get-PSDrive C` or `dir C:\ /s /a`.
+      2. Free space: delete/archive old log files, temp files, and crash dumps.
+      3. Move large data directories to a different volume.
+      4. Expand the volume via Disk Management or cloud-provider console.
+
+      **Prevention:** Set disk-usage alerts at 80 % and 90 % thresholds; automate log rotation.
+
+  - error: "no space left on device"
+    severity: CRITICAL
+    solution: |
+      **Root Cause:** Volume has reached 100 % capacity.
+
+      **Solution:**
+      1. Immediately free space: clean temp files (`cleanmgr`), truncate/archive logs.
+      2. Identify largest consumers: `du -sh *` (WSL) or TreeSize Free.
+      3. Extend the volume or add a new disk.
+
+      **Prevention:** Implement automated log rotation (logrotate / NLog archive rules).
+
+  # ── SSL / TLS ─────────────────────────────────────────────
+  - error: "SSL certificate expired"
+    severity: ERROR
+    solution: |
+      **Root Cause:** The TLS certificate for the server/client has passed its expiry date.
+
+      **Solution:**
+      1. Renew the certificate from your CA (Let's Encrypt: `certbot renew`).
+      2. Import the new certificate into the Windows Certificate Store or IIS.
+      3. Restart the affected service to pick up the new cert.
+
+      **Prevention:** Enable auto-renewal (Let's Encrypt / ACME); add calendar alerts 30 days before expiry.
+
+  - error: "certificate verify failed"
+    severity: ERROR
+    solution: |
+      **Root Cause:** The server's certificate cannot be validated against the trust store.
+
+      **Solution:**
+      1. Install the issuing CA's root certificate into the Windows Trusted Root store.
+      2. Check system clock accuracy (certificate validation is time-sensitive).
+      3. Ensure the hostname in the request matches the certificate's CN/SAN.
+
+      **Prevention:** Keep CA bundles up to date; use well-known public CAs for externally-facing services.
+
+  # ── Application runtime ───────────────────────────────────
+  - error: "NullPointerException"
+    severity: ERROR
+    solution: |
+      **Root Cause:** Code is dereferencing a null/None reference before checking its existence.
+
+      **Solution:**
+      1. Add a null-check before the dereference.
+      2. Review the stack trace to identify the exact line and variable.
+      3. Trace backward to where the variable should have been assigned.
+      4. Add defensive initialization or use the Null Object pattern.
+
+      **Prevention:** Use Optional<> / nullable types; enable static null analysis in the IDE.
+
+  - error: "Unhandled exception"
+    severity: ERROR
+    solution: |
+      **Root Cause:** An exception was thrown at a point where no try/catch block was present.
+
+      **Solution:**
+      1. Examine the full stack trace in the log to identify the source.
+      2. Wrap the offending code in an appropriate try/catch/finally block.
+      3. Ensure exceptions are logged before the process exits.
+      4. Add a global last-resort handler (e.g., AppDomain.UnhandledException in .NET).
+
+      **Prevention:** Conduct code review for unprotected entry points; use centralised exception handling.
+
+  - error: "service unavailable"
+    severity: ERROR
+    solution: |
+      **Root Cause:** A dependent service is down, overloaded, or in maintenance.
+
+      **Solution:**
+      1. Check the health endpoint of the dependency.
+      2. Review the dependency's own logs for errors.
+      3. Implement a fallback / graceful degradation path in your application.
+      4. Add a retry with exponential back-off.
+
+      **Prevention:** Define SLAs for dependencies; add circuit breakers (e.g., Polly in .NET).
+
+  # ── Windows-specific ─────────────────────────────────────
+  - error: "The system cannot find the file specified"
+    severity: ERROR
+    solution: |
+      **Root Cause:** A referenced file or path does not exist at the expected location.
+
+      **Solution:**
+      1. Verify the path is correct: `Test-Path "C:\expected\path"`.
+      2. Check whether the file was deleted, moved, or never created.
+      3. Ensure the application has the correct working directory.
+      4. Review environment-variable expansion in config files.
+
+      **Prevention:** Validate all file paths at application startup; use absolute paths.
+
+  - error: "Failed to start service"
+    severity: ERROR
+    solution: |
+      **Root Cause:** Windows Service Control Manager could not start the service — commonly due to missing executable, bad config, or permission issue.
+
+      **Solution:**
+      1. Check the Windows Event Viewer: `eventvwr.msc` → Windows Logs → System / Application.
+      2. Attempt a manual start: `Start-Service -Name "<ServiceName>"` and note the error.
+      3. Verify the service executable path: `sc qc "<ServiceName>"`.
+      4. Ensure the service account has "Log on as a service" rights.
+
+      **Prevention:** Smoke-test service startup in CI/CD; use dependency-ordered service start.

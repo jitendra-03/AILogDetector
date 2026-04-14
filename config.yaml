@@ -1,0 +1,135 @@
+﻿# =============================================================
+#  AI Log Error Detector â€” Configuration
+# =============================================================
+
+# â”€â”€ Log files to monitor â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# Add absolute paths to any log files you want watched.
+log_paths:
+  - "C:/Users/Administrator/Documents/AILogDetector/demo.log"
+
+# â”€â”€ Error pattern rules â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# Patterns are matched case-insensitively with Python regex.
+error_patterns:
+  - level: CRITICAL
+    patterns:
+      - "CRITICAL"
+      - "FATAL"
+      - "PANIC"
+      - "KERNEL PANIC"
+      - "system failure"
+
+  - level: ERROR
+    patterns:
+      - "\\bERROR\\b"
+      - "Exception"
+      - "Traceback"
+      - "\\bError:"
+      - "FAILED"
+      - "Access is denied"
+      - "Access Denied"
+      - "Unhandled exception"
+      - "Stack overflow"
+      - "Segmentation fault"
+
+  - level: WARNING
+    patterns:
+      - "\\bWARNING\\b"
+      - "\\bWARN\\b"
+      - "Connection refused"
+      - "timed? ?out"
+      - "could not connect"
+      - "permission denied"
+      - "disk.* full"
+      - "low memory"
+      - "deprecated"
+
+# Minimum severity level to process (CRITICAL | ERROR | WARNING)
+min_severity: "ERROR"
+
+# â”€â”€ Monitoring settings â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+monitoring:
+  poll_interval: 2       # seconds between file checks
+  context_lines: 5       # surrounding lines captured for context
+  dedup_window: 60       # seconds to suppress same error re-alert
+  burst_timeout: 3.0     # seconds of idle before flushing a burst of errors
+  continuation_lines: 3  # non-error lines absorbed into the preceding error block
+
+# â”€â”€ Embeddings â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# Model is downloaded on first run (~90 MB). No API key required.
+embedding:
+  model: "all-MiniLM-L6-v2"
+  device: "cpu"           # cpu | cuda
+
+# â”€â”€ Vector Database (Knowledge Base) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+vector_db:
+  path: "./knowledge_base/chromadb"
+  collection_name: "log_errors"
+  n_results: 3            # number of similar past errors to retrieve
+
+# â”€â”€ External Knowledge Base Scraping â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# Set enabled: true to automatically search Serena KB for error solutions.
+# Note: Serena KB may require authentication â€” contact your knowledge base admin.
+knowledge_base:
+  enabled: true
+  provider: "serena"
+  base_url: "https://knowledgebase.serena.com/InfoCenter/index?page=home"
+  search_url: "https://knowledgebase.serena.com/InfoCenter/index?page=answers&type=search&question_box={query}&token={token}"
+  cache_path: "./knowledge_base/serena_cache.jsonl"
+  max_results: 5          # articles fetched per channel
+  timeout: 20
+  auto_search_on_error: true
+  similarity_threshold: 0.7
+  max_article_chars: 4000
+  user_agent: "AILogDetector/1.0"
+  # Channels to search — order matters (defects first for error matching)
+  search_channels:
+    - defects
+    - solutions
+
+# â”€â”€ LLM (RAG Engine) â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+llm:
+  provider: "groq"      # openai | groq | ollama
+  model: "llama-3.3-70b-versatile"   # free on Groq's free tier
+  # Groq free tier: https://console.groq.com  (14400 req/day)
+  # For Ollama: provider: "ollama", model: "llama3"
+  # api_base: "http://localhost:11434/v1"   # Ollama base URL
+  temperature: 0.3
+  max_tokens: 1000
+
+# â”€â”€ Screenshot â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+screenshot:
+  enabled: true
+  save_path: "./screenshots"
+  format: "PNG"            # PNG | JPEG
+  # Path to Notepad++ executable.  Leave blank to let the detector search
+  # the two standard install locations automatically.
+  notepadpp_path: "C:/Program Files/Notepad++/notepad++.exe"
+  # Seconds to wait after launching Notepad++ before taking the screenshot
+  # (gives the window time to open / bring itself to the foreground).
+  notepadpp_focus_delay: 2.0
+
+# â”€â”€ Microsoft Teams Alerts â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+teams:
+  # Set webhook URL here or in .env as TEAMS_WEBHOOK_URL
+  webhook_url: "https://opentextcorporation.webhook.office.com/webhookb2/887c505a-f67c-4478-b7b5-ae95d62b7f55@10a18477-d533-4ecd-a78d-916dbd849d7c/IncomingWebhook/9abc0981c16d458b837798aba0b391ce/4608bc9c-45e1-40f1-a1ff-467b3aec07b2/V27qS5mMAJK3Zu0yxDQpgkk1RQs_mB1LDs2CXINT_QTg81"
+  alert_cooldown: 300      # seconds between duplicate alerts per error
+  max_solution_length: 800 # max chars shown in Teams card
+
+# ── Email Alerts ─────────────────────────────────────────────────────
+email:
+  enabled: true
+  smtp_host: "smtp.microfocus.com"    # e.g. smtp.office365.com / smtp.gmail.com
+  smtp_port: 587                      # 587 (STARTTLS) | 465 (SSL) | 25 (plain)
+  use_starttls: true                  # upgrade with STARTTLS after connect (port 587)
+  use_ssl: false                      # use SMTP_SSL from the start (port 465)
+  username: "bmohammad2@opentext.com" # SMTP login (or set SMTP_USERNAME env var)
+  password: "MicroSoft@1234"          # SMTP password (or set SMTP_PASSWORD env var)
+  sender: "bmohammad2@opentext.com"   # From address
+  recipients:                         # Each recipient on its own line
+    - "vgonela@opentext.com"
+    - "bmohammad2@opentext.com"
+    - "amohiddin@opentext.com"
+    - "jsontyana@opentext.com"
+  alert_cooldown: 300                 # seconds between duplicate emails per error
+  timeout: 30                         # SMTP connection timeout in seconds
+

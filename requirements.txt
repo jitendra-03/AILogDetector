@@ -1,0 +1,35 @@
+# AI Log Error Detector - Dependencies
+
+# File watching
+watchdog>=3.0.0
+
+# Embeddings (ONNX Runtime — no torch needed, works on Python 3.14)
+sentencepiece>=0.1.99
+sklearn-crfsuite>=0.3.6
+onnxruntime>=1.17.0
+transformers>=4.36.0
+
+# Vector database
+chromadb>=0.5.3
+
+# LLM (OpenAI-compatible: OpenAI, Azure OpenAI, Ollama)
+openai>=1.30.0
+
+# Configuration & environment
+python-dotenv>=1.0.0
+pyyaml>=6.0.1
+
+# HTTP requests (Teams webhook)
+requests>=2.32.0
+beautifulsoup4>=4.12.3
+
+# Screenshot capture
+pyautogui>=0.9.54
+Pillow>=10.4.0
+
+# Rich terminal UI
+rich>=13.7.0
+colorama>=0.4.6
+
+# Utilities
+numpy>=1.24.0

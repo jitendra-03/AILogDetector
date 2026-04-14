@@ -1,0 +1,3192 @@
+﻿2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+2026-04-01 09:01:10 INFO  Request received: GET /api/health
+2026-04-01 09:02:33 WARNING Low memory detected: available 512 MB of 8192 MB
+2026-04-01 09:05:01 ERROR Failed to connect to database: Connection refused (host=db.internal port=5432)
+2026-04-01 09:05:01 ERROR Unhandled exception in DatabaseConnectionPool.acquire()
+2026-04-01 09:05:06 ERROR Traceback (most recent call last):
+2026-04-01 09:05:06 ERROR   File app/db/pool.py line 88 in acquire
+2026-04-01 09:05:06 ERROR DatabaseError: Max retries exceeded after 3 attempts
+2026-04-01 09:06:01 ERROR Access is denied to replica configuration file
+2026-04-01 09:06:10 CRITICAL system failure - application cannot continue without database
+2026-04-01 09:10:00 INFO  Application restarting after 60s back-off
+2026-04-01 09:10:01 INFO  Database connection re-established
+2026-04-01 09:15:44 WARNING Disk usage at 89% on volume C:\
+2026-04-01 09:20:31 ERROR java.io.IOException: Disk full - unable to write to C:\Logs\app.log
+2026-04-01 09:20:31 ERROR   at java.io.FileOutputStream.write(FileOutputStream.java:326)
+2026-04-01 09:20:31 ERROR   at com.app.FileProcessor.flush(FileProcessor.java:88)
+2026-04-01 09:25:10 ERROR Access Denied: user 'svc_account' lacks WRITE on C:\AppData\config\
+2026-04-01 09:25:10 ERROR Access is denied. (HRESULT: 0x80070005)
+2026-04-01 09:30:00 ERROR java.net.SocketTimeoutException: Read timed out after 60000ms calling GET https://api.external.com/v1/data
+2026-04-01 09:30:01 ERROR Unhandled exception in request pipeline: NullPointerException
+2026-04-01 09:30:01 ERROR   at com.app.HttpClient.parseResponse(HttpClient.java:201)
+2026-04-01 09:35:22 ERROR SSL certificate for api.external.com has expired
+2026-04-01 09:35:22 ERROR javax.net.ssl.SSLHandshakeException: PKIX path building failed
+2026-04-01 09:40:05 CRITICAL java.lang.OutOfMemoryError: Java heap space
+2026-04-01 09:40:05 CRITICAL   at java.util.Arrays.copyOf(Arrays.java:3236)
+2026-04-01 09:40:05 CRITICAL   at com.app.DataProcessor.bufferData(DataProcessor.java:312)
+2026-04-01 09:45:17 ERROR Windows service 'AppMonitorSvc' FAILED to start
+2026-04-01 09:45:17 ERROR System error 1053: service did not respond in timely fashion
+2026-04-01 09:50:30 WARNING Connection pool exhausted (all 10 connections in use)
+2026-04-01 09:50:31 ERROR FAILED to allocate connection: max pool size reached
+2026-04-01 09:55:45 ERROR Stack overflow detected in worker thread-7
+2026-04-01 09:55:45 ERROR java.lang.StackOverflowError at com.app.RecursiveProcessor.process(RecursiveProcessor.java:55)
+2026-04-01 10:00:00 INFO  Scheduled health check running
+2026-04-01 10:00:01 ERROR Health check FAILED: service unavailable at http://internal-api:9090/health
+2026-04-01 10:05:12 ERROR Deadlock detected in transaction T-4421
+2026-04-01 10:05:12 ERROR   Deadlock victim: UPDATE orders SET status='processing' WHERE id=9901
+2026-04-01 10:10:00 INFO  Graceful shutdown initiated
+2026-04-01 10:10:01 INFO  All threads stopped.
+SBM: Transition Report gives "[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data"
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+2026-04-01 09:01:10 INFO  Request received: GET /api/health
+2026-04-01 09:02:33 WARNING Low memory detected: available 512 MB of 8192 MB
+2026-04-01 09:05:01 ERROR Failed to connect to database: Connection refused (host=db.internal port=5432)
+2026-04-01 09:05:01 ERROR Unhandled exception in DatabaseConnectionPool.acquire()
+2026-04-01 09:05:06 ERROR Traceback (most recent call last):
+2026-04-01 09:05:06 ERROR   File app/db/pool.py line 88 in acquire
+2026-04-01 09:05:06 ERROR DatabaseError: Max retries exceeded after 3 attempts
+2026-04-01 09:06:01 ERROR Access is denied to replica configuration file
+2026-04-01 09:06:10 CRITICAL system failure - application cannot continue without database
+2026-04-01 09:10:00 INFO  Application restarting after 60s back-off
+2026-04-01 09:10:01 INFO  Database connection re-established
+2026-04-01 09:15:44 WARNING Disk usage at 89% on volume C:\
+2026-04-01 09:20:31 ERROR java.io.IOException: Disk full - unable to write to C:\Logs\app.log
+2026-04-01 09:20:31 ERROR   at java.io.FileOutputStream.write(FileOutputStream.java:326)
+2026-04-01 09:20:31 ERROR   at com.app.FileProcessor.flush(FileProcessor.java:88)
+2026-04-01 09:25:10 ERROR Access Denied: user 'svc_account' lacks WRITE on C:\AppData\config\
+2026-04-01 09:25:10 ERROR Access is denied. (HRESULT: 0x80070005)
+2026-04-01 09:30:00 ERROR java.net.SocketTimeoutException: Read timed out after 60000ms calling GET https://api.external.com/v1/data
+2026-04-01 09:30:01 ERROR Unhandled exception in request pipeline: NullPointerException
+2026-04-01 09:30:01 ERROR   at com.app.HttpClient.parseResponse(HttpClient.java:201)
+2026-04-01 09:35:22 ERROR SSL certificate for api.external.com has expired
+2026-04-01 09:35:22 ERROR javax.net.ssl.SSLHandshakeException: PKIX path building failed
+2026-04-01 09:40:05 CRITICAL java.lang.OutOfMemoryError: Java heap space
+2026-04-01 09:40:05 CRITICAL   at java.util.Arrays.copyOf(Arrays.java:3236)
+2026-04-01 09:40:05 CRITICAL   at com.app.DataProcessor.bufferData(DataProcessor.java:312)
+2026-04-01 09:45:17 ERROR Windows service 'AppMonitorSvc' FAILED to start
+2026-04-01 09:45:17 ERROR System error 1053: service did not respond in timely fashion
+2026-04-01 09:50:30 WARNING Connection pool exhausted (all 10 connections in use)
+2026-04-01 09:50:31 ERROR FAILED to allocate connection: max pool size reached
+2026-04-01 09:55:45 ERROR Stack overflow detected in worker thread-7
+2026-04-01 09:55:45 ERROR java.lang.StackOverflowError at com.app.RecursiveProcessor.process(RecursiveProcessor.java:55)
+2026-04-01 10:00:00 INFO  Scheduled health check running
+2026-04-01 10:00:01 ERROR Health check FAILED: service unavailable at http://internal-api:9090/health
+2026-04-01 10:05:12 ERROR Deadlock detected in transaction T-4421
+2026-04-01 10:05:12 ERROR   Deadlock victim: UPDATE orders SET status='processing' WHERE id=9901
+2026-04-01 10:10:00 INFO  Graceful shutdown initiated
+2026-04-01 10:10:01 INFO  All threads stopped.
+SBM: Transition Report gives "[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data"
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+2026-04-01 09:01:10 INFO  Request received: GET /api/health
+2026-04-01 09:02:33 WARNING Low memory detected: available 512 MB of 8192 MB
+2026-04-01 09:05:01 ERROR Failed to connect to database: Connection refused (host=db.internal port=5432)
+2026-04-01 09:05:01 ERROR Unhandled exception in DatabaseConnectionPool.acquire()
+2026-04-01 09:05:06 ERROR Traceback (most recent call last):
+2026-04-01 09:05:06 ERROR   File app/db/pool.py line 88 in acquire
+2026-04-01 09:05:06 ERROR DatabaseError: Max retries exceeded after 3 attempts
+2026-04-01 09:06:01 ERROR Access is denied to replica configuration file
+2026-04-01 09:06:10 CRITICAL system failure - application cannot continue without database
+2026-04-01 09:10:00 INFO  Application restarting after 60s back-off
+2026-04-01 09:10:01 INFO  Database connection re-established
+2026-04-01 09:15:44 WARNING Disk usage at 89% on volume C:\
+2026-04-01 09:20:31 ERROR java.io.IOException: Disk full - unable to write to C:\Logs\app.log
+2026-04-01 09:20:31 ERROR   at java.io.FileOutputStream.write(FileOutputStream.java:326)
+2026-04-01 09:20:31 ERROR   at com.app.FileProcessor.flush(FileProcessor.java:88)
+2026-04-01 09:25:10 ERROR Access Denied: user 'svc_account' lacks WRITE on C:\AppData\config\
+2026-04-01 09:25:10 ERROR Access is denied. (HRESULT: 0x80070005)
+2026-04-01 09:30:00 ERROR java.net.SocketTimeoutException: Read timed out after 60000ms calling GET https://api.external.com/v1/data
+2026-04-01 09:30:01 ERROR Unhandled exception in request pipeline: NullPointerException
+2026-04-01 09:30:01 ERROR   at com.app.HttpClient.parseResponse(HttpClient.java:201)
+2026-04-01 09:35:22 ERROR SSL certificate for api.external.com has expired
+2026-04-01 09:35:22 ERROR javax.net.ssl.SSLHandshakeException: PKIX path building failed
+2026-04-01 09:40:05 CRITICAL java.lang.OutOfMemoryError: Java heap space
+2026-04-01 09:40:05 CRITICAL   at java.util.Arrays.copyOf(Arrays.java:3236)
+2026-04-01 09:40:05 CRITICAL   at com.app.DataProcessor.bufferData(DataProcessor.java:312)
+2026-04-01 09:45:17 ERROR Windows service 'AppMonitorSvc' FAILED to start
+2026-04-01 09:45:17 ERROR System error 1053: service did not respond in timely fashion
+2026-04-01 09:50:30 WARNING Connection pool exhausted (all 10 connections in use)
+2026-04-01 09:50:31 ERROR FAILED to allocate connection: max pool size reached
+2026-04-01 09:55:45 ERROR Stack overflow detected in worker thread-7
+2026-04-01 09:55:45 ERROR java.lang.StackOverflowError at com.app.RecursiveProcessor.process(RecursiveProcessor.java:55)
+2026-04-01 10:00:00 INFO  Scheduled health check running
+2026-04-01 10:00:01 ERROR Health check FAILED: service unavailable at http://internal-api:9090/health
+2026-04-01 10:05:12 ERROR Deadlock detected in transaction T-4421
+2026-04-01 10:05:12 ERROR   Deadlock victim: UPDATE orders SET status='processing' WHERE id=9901
+2026-04-01 10:10:00 INFO  Graceful shutdown initiated
+2026-04-01 10:10:01 INFO  All threads stopped.
+SBM: Transition Report gives "[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data"
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+
+When running a transition listing report, the name of the transition will show as "[PARSING ERROR]" in the Excel document when the transition name includes an ampersand '&'.    In the case that two transitions with the same name are selected to be included, the selected names will include the state to which each transition leads.  If the state name has an ampersand '&', this same error will happen.
+
+The error appears in the cell in Excel in the Transition column like this:
+
+"[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data, line 1, char 74 Message: expected entity name for reference" 
+Transition Report gives "[PARSING ERROR:] Incorrect rich text cell data format Parser Fatal Error at file Cell Data"
+Error SSM: Older forms display error messages that include html tags
+If a relation field (which uses the system CONTACTS table) has a dependency, searching for values will not return any results. For example, if one of the values is "Peter", searching for "Peter" or just "P" will not return any values. Search works fine when the dependency is removed.
+
+Note: The same issue could happen with other system tables.
+Re
+Copying a date/time value from one date/time field to another date/time field causes the second field to display as "Error". Example code is:
+
+Call Shell.Item.GetFieldValue("DATE_FIELD_1", dateValue1)
+Call Shell.Item.SetFieldValue("DATE_FIELD_2", dateValue1)
+
+After the above code runs, the value of the DATE_FIELD_2 will display as "Error".  Looking in the database, the value is "1899-12-26 00:00:00.000"
+
+This problem only happens if System Admin (System Admin > Options > Settings > Locale) and User Setting locale are BOTH set to "Slovenian (Solvenia)". Other locales may also have this problem, but this one was confirmed. The English locales (and others) do not appear to have this issue.
+Copying a date/time value from one date/time field to another date/time field causes the second field to display as "Error". Example code is:
+
+Call Shell.Item.GetFieldValue("DATE_FIELD_1", dateValue1)
+Call Shell.Item.SetFieldValue("DATE_FIELD_2", dateValue1)
+
+After the above code runs, the value of the DATE_FIELD_2 will display as "Error".  Looking in the database, the value is "1899-12-26 00:00:00.000"
+
+This problem only happens if System Admin (System Admin > Options > Settings > Locale) and User Setting locale are BOTH set to "Slovenian (Solvenia)". Other locales may also have this problem, but this one was confirmed. The English locales (and others) do not appear to have this issue.
+Copying a date/time value from one date/time field to another date/time field causes the second field to display as "Error". Example code is:
+
+Call Shell.Item.GetFieldValue("DATE_FIELD_1", dateValue1)
+Call Shell.Item.SetFieldValue("DATE_FIELD_2", dateValue1)
+
+After the above code runs, the value of the DATE_FIELD_2 will display as "Error".  Looking in the database, the value is "1899-12-26 00:00:00.000"
+
+This problem only happens if System Admin (System Admin > Options > Settings > Locale) and User Setting locale are BOTH set to "Slovenian (Solvenia)". Other locales may also have this problem, but this one was confirmed. The English locales (and others) do not appear to have this issue.
+InitExtension Failed" when accessing SBM
+InitExtension Failed" when accessing SBM
+InitExtension Failed" when accessing SBM
+If an AppScript is using "now" to set a field value, the result may not be saved correctly and will display to the user as "Error".
+
+For example, if the AppScript looks like this:
+Call Shell.Item.SetFieldValue("Close Date", now)
+ 
+The value will be saved to the database with a value of:  "1
+899-12-26 00:00:00.000"
+Also, when users look at the State form, the value of the field displays as the word "Error" instead of a date.
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+ERROR -- Parser Error at file C:/...../instance.xml, line 307, char 9
+Message: element 'LiteralValue' is not allowed for content model
+ERROR -- Parser Error at file C:/...../instance.xml, line 307, char 9
+Message: element 'LiteralValue' is not allowed for content model
+ERROR -- Parser Error at file C:/...../instance.xml, line 307, char 9
+Message: element 'LiteralValue' is not allowed for content model
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
+HTTP status server 500 - Internal Server Error when trying to get OAuth2 access
+Error occurred in file:
+'D:\bld\BM_MAINLINE\BM_MAINLINE-AEX64\Application_Engine\software\teamtrack\source\Process\SLError.cpp', line 310.
+User: Id 8, 'Administrator'
+RUNTIME ERROR IN SCRIPT "scriptIncludeParentSubmit" (id=9)
+(called from runmodscript-SOAP context)
+ModScript Error -- ERR #34
+Line -1> { Unavailable }
+Error: "Unknown Exception"
+Error occurred in file:
+'D:\bld\BM_MAINLINE\BM_MAINLINE-AEX64\Application_Engine\software\teamtrack\source\Process\SLError.cpp', line 310.
+User: Id 8, 'Administrator'
+RUNTIME ERROR IN SCRIPT "scriptIncludeParentSubmit" (id=9)
+(called from runmodscript-SOAP context)
+ModScript Error -- ERR #34
+Line -1> { Unavailable }
+Error: "Unknown Exception"
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
+
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+2026-04-01 09:01:10 INFO  Request received: GET /api/health
+2026-04-01 09:02:33 WARNING Low memory detected: available 512 MB of 8192 MB
+
+2026-04-01 09:05:01 ERROR Failed to connect to database: Connection refused (host=db.internal port=5432)
+
+Out of disk space" 
+Out of disk space" 
+Error Out of disk space" 
+Warning "Out of disk space" 
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:52:11 INFO  Circuit breaker opened for database service
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:52:11 INFO  Circuit breaker opened for database service
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:52:11 INFO  Circuit breaker opened for database service
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
+Error occurred in file:
+'D:\bld\BM_MAINLINE\BM_MAINLINE-AEX64\Application_Engine\software\teamtrack\source\Process\SLError.cpp', line 310.
+User: Id 8, 'Administrator'
+RUNTIME ERROR IN SCRIPT "scriptIncludeParentSubmit" (id=9)
+(called from runmodscript-SOAP context)
+ModScript Error -- ERR #34
+Line -1> { Unavailable }
+Error: "Unknown Exception"
+
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO 
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+
+
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
+
+
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:52:11 INFO  Circuit breaker opened for database service
+2026-04-01 09:00:01 INFO  Application starting up (version 3.2.1)
+
+2026-04-01 09:00:02 INFO  Loading configuration from config.yaml
+
+2026-04-01 09:00:03 INFO  Connecting to database at db.internal:5432
+
+2026-04-01 09:00:04 INFO  Database connection pool initialized (size=10)
+
+2026-04-01 09:00:05 INFO  Starting HTTP listener on port 8080
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:51:50 WARN  Database query latency exceeded threshold (1620ms)
+
+2026-04-01 09:51:55 WARN  Connection pool utilization high (9/10)
+
+2026-04-01 09:52:00 WARN  Retrying database operation (attempt 1)
+
+2026-04-01 09:52:05 WARN  Retrying database operation (attempt 2)
+
+2026-04-01 09:52:10 ERROR Out of disk space
+
+2026-04-01 09:51:45 INFO  INFO #481 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:00:06 INFO  INFO #1 - Health check scheduler started
+
+2026-04-01 09:00:07 INFO  INFO #2 - Cache manager initialized
+
+2026-04-01 09:00:08 INFO  INFO #3 - Background job runner started
+
+2026-04-01 09:00:09 INFO  INFO #4 - Metrics reporter enabled
+
+2026-04-01 09:00:10 INFO  INFO #5 - System ready to accept requests
+
+2026-04-01 09:01:00 INFO  INFO #6 - GET /api/health 200 OK
+
+2026-04-01 09:01:10 INFO  INFO #7 - GET /api/health 200 OK
+
+2026-04-01 09:01:20 INFO  INFO #8 - GET /api/health 200 OK
+
+2026-04-01 09:02:00 INFO  INFO #9 - Scheduled cleanup task completed
+
+2026-04-01 09:28:50 INFO  INFO #178 - Request processed successfully requestId=7fa921
+
+2026-04-01 09:28:55 INFO  INFO #179 - Request processed successfully requestId=7fa922
+
+2026-04-01 09:29:00 INFO  INFO #180 - Request processed successfully requestId=7fa923
+
+2026-04-01 09:29:05 INFO  INFO #181 - Cache hit for key=user:9821
+
+2026-04-01 09:29:10 INFO  INFO #182 - Cache hit for key=user:9822
+
+2026-04-01 09:29:15 INFO  INFO #183 - Cache hit for key=user:9823
+
+2026-04-01 09:51:40 INFO  INFO #479 - Metrics pushed successfully (cpu=68%, mem=71%)
+
+2026-04-01 09:51:45 INFO  INFO #480 - Request completed requestId=9bc812 duration=342ms
+
+2026-04-01 09:52:11 INFO  Circuit breaker opened for database service
+
+2025-04-09 18:47:51,095 ERROR [Catalina-utility-10] [com.serena.eventlog.EventManager:311] [::] -- Failed doUpgrade ORA-02158: invalid CREATE INDEX option
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:268] [::] -- Serena Event Log failed to initialize.
+2025-04-09 18:47:51,096 FATAL [Catalina-utility-10] [com.serena.eventlog.EventManager:269] [::] -- Exception: ORA-02158: invalid CREATE INDEX option
+
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
+
+
+Error occurred in file:
+'D:\bld\BM_MAINLINE\BM_MAINLINE-AEX64\Application_Engine\software\teamtrack\source\Process\SLError.cpp', line 310.
+User: Id 8, 'Administrator'
+RUNTIME ERROR IN SCRIPT "scriptIncludeParentSubmit" (id=9)
+(called from runmodscript-SOAP context)
+ModScript Error -- ERR #34
+Line -1> { Unavailable }
+Error: "Unknown Exception"
+2025-05-15 15:09:39,022 ERROR [ajp-nio-0.0.0.0-6009-exec-6] [org.apache.catalina.core.ContainerBase.[Catalina].[localhost].[/commonsvc].[resourcemgmt]:175] [::] -- Servlet.service() for servlet [resourcemgmt] in context with path [/commonsvc] threw exception [Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]] with root cause
+org.apache.jasper.JasperException: Unable to get JAR resource [/WEB-INF/views/jakarta.tags.core] containing TLD: [java.io.FileNotFoundException]
+at org.apache.jasper.compiler.DefaultErrorHandler.jspError(DefaultErrorHandler.java:37) ~[jasper.jar:10.1.34]
